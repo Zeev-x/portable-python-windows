@@ -3,7 +3,7 @@ import sys
 import subprocess
 
 def main():
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    script_dir = os.getcwd()
     python_path = os.path.join(script_dir, "reyette_py", "python.exe")
     #print("Python portable di:", python_path)
 
