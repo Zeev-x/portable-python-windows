@@ -45,8 +45,8 @@ Lib\\site-packages
 
 def get_python_version():
     global py_version
-    if len(sys.argv) >= 3:
-        py_version = int(sys.argv[2])
+    if len(sys.argv) >= 2:
+        py_version = int(sys.argv[1])
         if py_version not in [12, 14, 15]:
             print("Invalid version specified. Please use '12', '14', or '15'.")
             sys.exit(1)
@@ -60,8 +60,8 @@ def get_python_version():
             print("Invalid input. Please enter '12', '14' or '15'.")
 
 def get_python_embed_url():
-    if len(sys.argv) >= 4:
-        arch = sys.argv[3]
+    if len(sys.argv) >= 3:
+        arch = sys.argv[2]
         if arch not in ["32", "64"]:
             print("Invalid architecture specified. Please use '32' or '64'.")
             sys.exit(1)
